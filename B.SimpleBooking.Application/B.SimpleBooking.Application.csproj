@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="AutoMapper" Version="13.0.1" />
+		<PackageReference Include="FluentValidation" Version="11.9.2" />
+		<PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+		<PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.9.2" />
+		<PackageReference Include="MediatR" Version="12.3.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\D.SimpleBooking.Domain\D.SimpleBooking.Domain.csproj" />
+		<ProjectReference Include="..\C.SimpleBooking.Infrastructure\C.SimpleBooking.Infrastructure.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="Services\ResultPattern\ErrorMessages\ErrorMessages.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>ErrorMessages.resx</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <EmbeddedResource Update="Services\ResultPattern\ErrorMessages\ErrorMessages.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>ErrorMessages.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
+	</ItemGroup>
+
+</Project>

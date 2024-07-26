@@ -1,0 +1,6 @@
+@A.SimpleBooking.API_HostAddress = http://localhost:5224
+
+GET {{A.SimpleBooking.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
